@@ -1,13 +1,21 @@
+html {
+  min-height: 100%;
+  background: #03013b url('../img2.png') center top / cover no-repeat;
+}
+
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   background-image: url('../img2.png');
   background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-color: #03013b;
   font-size: 14px;
   font-family: sans-serif;
   color: white;
-  overflow: auto;
+  overflow-x: hidden;
 }
 a {
   color: white;
@@ -83,4 +91,74 @@ a {
   font-size: 25px;
   font-family: monospace;
 
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #main {
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #wrap {
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #canvas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1100px;
+    height: 680px;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+
+  #text {
+    left: 18px;
+    top: 72px;
+    width: calc(100vw - 36px);
+    height: auto;
+  }
+
+  #code {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 58px;
+  }
+
+  #clock-box {
+    left: 14px;
+    right: 14px;
+    top: auto;
+    bottom: 24px;
+    font-size: 18px;
+  }
+
+  #clock {
+    margin-left: 0;
+  }
+
+  #clock .digit {
+    font-size: 34px;
+  }
 }
