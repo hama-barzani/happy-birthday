@@ -102,9 +102,16 @@ a {
     overflow: hidden;
   }
 
-  body {
+  html {
+    background-image: url('../img2-mobile.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
+  }
+
+  body {
+    background-image: url('../img2-mobile.png');
+    background-size: cover;
+    background-position: center top;
   }
 
   #main {
